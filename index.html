@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="shortcut icon" href="./images/favicon-150x150.png" type="image/x-icon">
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="bg-[#CDC1FF] overflow-hidden">
+            <h1 class="text-center text-3xl mb-20 mt-10 font-bold">CRUDS system</h1>
+            <div class=" text-center mx-auto py-5 mb-10 px-10  w-3/4">
+                <div class="p-3 text-center">
+                    <input  type="text" class="input-style" placeholder="Product" id="productName" />
+                    <div class="input-style text-left bg-red-400 hidden mt-2 w-1/2" id="msgName">
+                        <p>please enter a valid name example: Iphone15</p>
+                    </div>
+                </div>
+                <div class="p-3 text-center">
+                    <input type="number" class="input-style" placeholder="Price" id="productPrice" />
+                    <div class="input-style text-left bg-red-400 hidden mt-2 w-1/2" id="msgPrice">
+                        <p>Price should be less than $1000
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 text-center">
+                    <input list="ice-cream-flavors" class="input-style" id="productCategory" name="ice-cream-choice"
+                        placeholder="Category" />
+                    <div class="input-style text-left bg-red-400 hidden mt-2 w-1/2" id="msgCategory">
+                        <p>This category isn't included
+                        </p>
+                    </div>
+                    <datalist id="ice-cream-flavors">
+                        <option value="Apple"></option>
+                        <option value="Sumsung"></option>
+                        <option value="Oppo"></option>
+                        <option value="Huawei"></option>
+                        <option value="Xiaomi"></option>
+                    </datalist>
+
+                </div>
+                <div class="p-3 text-center"><textarea type="text" class="input-style" rows="5"
+                        placeholder="Description" id="productDescription"> </textarea>
+                    <div class="input-style text-left bg-red-400 hidden mt-2 w-1/2" id="msgDescription">
+                        <p>where is description? ^_^
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-3 text-center mb-4">
+                    <input type="file" class="input-style" id="productImage" />
+                </div>
+                <div class="text-left p-3 mb-4 rounded-lg ms-3 w-1/2 bg-red-300 hidden" id="infoToUser">
+                    <p>you should fill all inputs</p>
+                </div>
+                <button class="btn-style"   id="btnAdd"  >add</button>
+                <button class="btn-style hidden" id="btnUppdate">uppdated</button>
+            </div>
+        </div>
+        <div class="bg-[#CDC1FF] overflow-hidden">
+            <div class="w-3/4 mx-auto py-5 px-[52px]">
+                <input type="search" class="input-style"  name="searchInput" id="searchInput"
+                    placeholder="search product by name">
+            </div>
+        </div>
+        <div class="bg-[#CDC1FF] text-center p-5 ">
+            <table class="w-full bg-white">
+                <thead class="border-b-2 border-black py-3">
+                    <tr>
+                        <th>id</th>
+                        <th>product</th>
+                        <th>price</th>
+                        <th>category</th>
+                        <th>description</th>
+                        <th>image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
